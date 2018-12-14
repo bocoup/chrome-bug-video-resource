@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<video autoplay id="v" src="2x2-green.ogv" type="video/ogg"></video>
+<script>
+document.getElementById('v').addEventListener('canplaythrough', function() {
+  document.body.appendChild(
+    document.createTextNode(
+      'Number of "resource" performance entries: ' +
+        performance.getEntriesByType('resource').length
+    )
+  );
+});
+</script>
+</html>
